@@ -57,6 +57,10 @@ export SHAPE=circle
 export PIXEL=40
 make_colors
 
+exit 0
+
+# Black isn't a good color for the symbols. But someone might want to experiment
+
 # Export all icons with black symbols
 
 export SYMBOL_COLOR=black
