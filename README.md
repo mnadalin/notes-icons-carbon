@@ -1,6 +1,5 @@
-# domino-dbicons
 
-## Notes 64x64 database icons: IBM Carbon design pictorgram + HCL backgrounds
+# Notes 64x64 database icons: IBM Carbon design pictorgram + HCL backgrounds
 
 Starting with **HCL Notes 12.0.1** the desktop supports database icons with **64x64 pixel**.
 Before 12.0.1 **32x32** have been already supported. This support goes back to Notes 8.5.x but many applications are still using the very old **16x16, 16 color** images.
@@ -36,7 +35,7 @@ The round format needs a bet smaller symbols to fit (40x40 pixel):
 ![Copenhagen Snekkja](docs/assets/images/png/organge_circle_white_copenhagen--snekkja.png)
 ![Uruguay Sun](docs/assets/images/png/yellow_circle_white_uruguay--sol-de-mayo.png)
 
-### Command Line conversion via Image Magick on Linux
+## Command Line conversion via Image Magick on Linux
 
 One great tool for the jobs is [Image Magick](https://imagemagick.org)
 
@@ -82,7 +81,7 @@ But converting just one image isn't what would help with 930 Carbond design pict
 This repository provides a simple to tweak script to convert all carbon design pictograms and convert them with the HCL backgrounds.
 
 
-### Clone Carbon design system from GitHub
+## Clone Carbon design system from GitHub
 
 First clone this repository to have access to the scripts.  
 Then also clone the carbon design system, which will be the source for the pictogram SVG files
