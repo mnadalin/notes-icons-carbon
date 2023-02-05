@@ -1,8 +1,8 @@
 
-# Notes 64x64 database icons: IBM Carbon design pictorgram + HCL backgrounds
+# Notes 64x64 icons: IBM Carbon design + HCL backgrounds
 
 Starting with **HCL Notes 12.0.1** the desktop supports database icons with **64x64 pixel**.
-Before 12.0.1 **32x32** have been already supported. This support goes back to Notes 8.5.x but many applications are still using the very old **16x16, 16 color** images.
+Before 12.0.1 **32x32** have been already supported. This support goes back to Notes 8.5.x but many applications are still using the very old **16x16** icons with **16 colors**.
 
 The best format available for images would be the SVG vector format.
 But Notes only supports GIF, JEPG and PNG today.
@@ -11,7 +11,7 @@ If you like the idea to support SVG in the Notes Client, here is an idea on the 
 
 PNG is the most modern and best of those three formats, because it supports image transparency and image layers.
 
-The [IBM Carbon design project](https://carbondesignsystem.com/guidelines/pictograms/library/) provides over 930 modern free of charge pictograms in **SVG format**.
+The [IBM Carbon design project](https://carbondesignsystem.com/guidelines/pictograms/library/) provides over 930 open sourced pictograms in **SVG format**.
 
 HCL provides a set of standard background images with perfect fit for Notes 64x64 database icons in **PNG format**.
 
