@@ -14,7 +14,7 @@ git clone https://github.com/mnadalin/domino-icons.git
 git clone https://github.com/carbon-design-system/carbon.git
 ```
 
-If you only need the `icons` directory you can only download it using [Download GitHub Directory](https://download-directory.github.io/) providing the folder URL `https://github.com/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32`
+If you only need the `icons` directory you can use [Download GitHub Directory](https://download-directory.github.io/) providing the folder URL [https://github.com/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32](`https://github.com/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32`)
 
 ### Define source and target directories
 
@@ -30,11 +30,13 @@ export IMAGE_DIR=/tmp/carbon-png
 
 ### Define sizes and colors
 
-Edit the bottom lines of the script to define size in pixel and color in hex format **without** leading `#`, like:
+Edit the bottom lines of the script to define size in pixel and color in hex format **without** the leading `#`, like:
 
 ```bash
 convert_all_images 0066B3 32
 ```
+
+To convert all SVGs to 32x32 PNG files filled with the Notes primary <strong style="color:#0066B3">blue</strong> color.
 
 ### Convert images
 
@@ -42,7 +44,7 @@ convert_all_images 0066B3 32
 ./convert_images.sh
 ```
 
-The scripts will build the symbols in the following directory structure:
+The script will output the PNG files in the following directory structure:
 
 ```
 /tmp/carbon-png
