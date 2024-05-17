@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -z "$CARBON_PICTOGRAMS_SVG" ]; then
-  CARBON_PICTOGRAMS_SVG=/tmp/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32
+if [ -z "$CARBON_ICONS_SVG" ]; then
+  CARBON_ICONS_SVG=/tmp/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32
 fi
 
 if [ -z "$IMAGE_DIR" ]; then
@@ -35,12 +35,13 @@ convert_all_images()
   export COLOR=$1
   export SIZE=$2
 
-  find "$CARBON_PICTOGRAMS_SVG" -name "*.svg" -exec bash -c 'convert_image $0' {} \;
+  find "$CARBON_ICONS_SVG" -name "*.svg" -exec bash -c 'convert_image $0' {} \;
 }
 
 export IMAGE_DIR
-export CARBON_PICTOGRAMS_SVG
+export CARBON_ICONS_SVG
 
 convert_all_images F7F7F7 24
-convert_all_images 313131 24
+convert_all_images F7F7F7 48
+convert_all_images 313131 48
 convert_all_images 0066B3 32

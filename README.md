@@ -1,13 +1,56 @@
 
 # Notes Carbon design icons
 
-Based on the [Notes 64x64 icons: IBM Carbon design + HCL backgrounds](https://github.com/nashcom/notes-dbicons-carbon), the goal here is to convert **icons** instead of **pictograms**, to be used in outlines, action bars and inside forms in general.
+Based on the [Notes 64x64 icons: IBM Carbon design + HCL backgrounds](https://github.com/nashcom/notes-dbicons-carbon), the goal here is to batch convert all the **icons** (not pictograms) to be used in outlines, actionbars, forms, etc.
 
 ## Batch convert icons
 
-Follow the instructions provided in the original repo.  
-Color can be only provided in **hex format**, such as:
+First clone this repository to have access to the script.  
+Then also clone the carbon design system, which will be the source for the icon SVG files:
 
-`convert_all_images 0066B3 32`
+```bash
+cd /tmp
+git clone https://github.com/mnadalin/domino-icons.git
+git clone https://github.com/carbon-design-system/carbon.git
+```
 
-To create 32x32 icons in the Notes primary blue color.
+If you only need the `icons` directory you can only download it using [Download GitHub Directory](https://download-directory.github.io/) providing the folder URL `https://github.com/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32`
+
+### Define source and target directories
+
+`CARBON_ICONS_SVG` defines the source directory of the carbon design SVC graphics  
+`IMAGE_DIR` defines the target directory to create the symbol files in different colors
+
+The following exports are the default behavior. If you cloned the repositories to the default locations, those variables are already set inside the scripts as a default.
+
+```bash
+export CARBON_ICONS_SVG=/tmp/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32
+export IMAGE_DIR=/tmp/carbon-png
+```
+
+### Define sizes and colors
+
+Edit the bottom lines of the script to define size in pixel and color in hex format **without** leading `#`, like:
+
+```bash
+convert_all_images 0066B3 32
+```
+
+### Convert images
+
+```bash
+./convert_images.sh
+```
+
+The scripts will build the symbols in the following directory structure:
+
+```
+/tmp/carbon-png
+├── 0066B3
+│   └── 32
+├── 313131
+│   └── 24
+├── F7F7F7
+│   └── 24
+│   └── 48
+```
