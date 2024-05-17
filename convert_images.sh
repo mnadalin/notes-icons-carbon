@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [ -z "$CARBON_PICTOGRAMS_SVG" ]; then
-  CARBON_PICTOGRAMS_SVG=/local/github/carbon/packages/pictograms/src/svg
+  CARBON_PICTOGRAMS_SVG=/tmp/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32
 fi
 
 if [ -z "$IMAGE_DIR" ]; then
-  IMAGE_DIR=/local/dbicon/ibm/carbon-pictograms-png
+  IMAGE_DIR=/tmp/carbon-png
 fi
 
 convert_image()
@@ -13,6 +13,8 @@ convert_image()
   local FILE=$(basename "$1" .svg)
   local TARGET_DIR=$IMAGE_DIR/$COLOR/$SIZE
   local TARGET_FILE=$TARGET_DIR/$FILE.png
+
+  echo "Converting $FILE to ${TARGET_FILE}..."
 
   if [ ! -e "$TARGET_DIR" ]; then
     mkdir -p "$TARGET_DIR"
@@ -22,11 +24,7 @@ convert_image()
     return 0
   fi
 
-  if [ "$COLOR" = "black" ]; then
-    convert -background transparent -size ${SIZE}x${SIZE} "$1" "$TARGET_FILE" &
-  else
-    sed "s/<svg version=\"1.1\"/<svg version=\"1.1\" fill=\"$COLOR\"/g" $1 | convert -background transparent -size ${SIZE}x${SIZE} - "$TARGET_FILE" &
-  fi
+  sed "s/viewBox/fill=\"#$COLOR\" viewBox/g" $1 | convert -background transparent -size ${SIZE}x${SIZE} - "$TARGET_FILE" &
 
 }
 
@@ -43,7 +41,6 @@ convert_all_images()
 export IMAGE_DIR
 export CARBON_PICTOGRAMS_SVG
 
-convert_all_images white 56
-convert_all_images white 40
-convert_all_images black 56
-convert_all_images black 40
+convert_all_images F7F7F7 24
+convert_all_images 313131 24
+convert_all_images 0066B3 32
