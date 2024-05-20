@@ -3,6 +3,10 @@
 
 Based on the [Notes 64x64 icons: IBM Carbon design + HCL backgrounds](https://github.com/nashcom/notes-dbicons-carbon), the goal here is to batch convert all the **icons** (not pictograms) to be used in outlines, actionbars, forms, etc.
 
+## Requirements
+
+[ImageMagick](https://imagemagick.org)
+
 ## Batch convert icons
 
 First clone this repository to have access to the script.  
