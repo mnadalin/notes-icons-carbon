@@ -14,7 +14,7 @@ Then also clone the carbon design system, which will be the source for the icon 
 
 ```bash
 cd /tmp
-git clone https://github.com/mnadalin/domino-icons.git
+git clone https://github.com/mnadalin/notes-carbon-icons.git
 git clone https://github.com/carbon-design-system/carbon.git
 ```
 
