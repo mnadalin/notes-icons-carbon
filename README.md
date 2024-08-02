@@ -28,7 +28,7 @@ If you only need the `icons` directory you can use [Download GitHub Directory](h
 The following exports are the default behavior. If you cloned the repositories to the default locations, those variables are already set inside the scripts as a default.
 
 ```bash
-export CARBON_ICONS_SVG=/tmp/carbon-design-system/carbon/tree/main/packages/icons/src/svg/32
+export CARBON_ICONS_SVG=/tmp/carbon/packages/icons/src/svg/32
 export IMAGE_DIR=/tmp/carbon-png
 ```
 
